@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+  <!-- metas -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="cleartype"       content="on">
+  <meta name="description"           content="<%= data.app.description %>">
+  <meta name="keywords"              content="<%= data.app.keywords %>">
+  
+  <!-- facebook metatags -->
+  <meta property="fb:app_id"      content="<%= data.app.facebook_tags.app_id %>" />
+  <meta property="og:type"        content="<%= data.app.facebook_tags.type %>" />
+  <meta property="og:title"       content="<%= data.app.facebook_tags.title %>" />
+  <meta property="og:image"       content="<%= data.app.facebook_tags.image %>" />
+  <meta property="og:description" content="<%= data.app.facebook_tags.description %>" />
+  <meta property="og:url"         content="<%= data.app.facebook_tags.url %>" />
+
+  <!-- icons -->
+  <link rel="shortcut icon" href="<%= data.app.assets.favicon %>">
+  
+  <!-- stylesheet -->
+  <%= stylesheet_link_tag 'main' %>
+  
+  <!-- javascript: head -->
+  <%= javascript_include_tag 'head' %>
+
+  <!-- title -->
+  <title><%= data.app.title %></title>
+  <%= yield_content :assets %>
+</head>
+
+<!-- body
+========================================================================================================= /// -->
+<body class="<%= page_classes %>">
+
+<!-- Header -->
+<%= partial "shared/header" %>
+
+
+<hr>
+  
+<!-- wrapper
+========================================================================================================= /// -->
+<div class="wrapper">
+<%= yield %>
+
+</div>
+
+<hr>
+
+<!-- Footer -->
+<%= partial "shared/footer" %>
+
+
+<!-- javascripts
+========================================================================================================= /// -->
+<%= javascript_include_tag 'main' %>
+<script>EURODANCECOMBR.config = <%= data.app.to_json %>;</script>
+  
+</body>
+</html>

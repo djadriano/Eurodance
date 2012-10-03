@@ -1,0 +1,21 @@
+# app config
+# -----------------------------------------------------
+title        : 'Eurodance.com.br'
+description  : 'Eurodance site'
+keywords     : 'eurodance, dj sound'
+search_value : 'Busque por exemplo: Masterboy'
+
+# facebook metatags
+# -----------------------------------------------------
+facebook_tags:
+  app_id      : '12345678'
+  type        : ''
+  title       : ''
+  image       : ''
+  description : ''
+  url         : ''
+
+# assets
+# -----------------------------------------------------
+assets:
+  favicon : ''

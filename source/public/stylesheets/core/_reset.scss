@@ -1,0 +1,9 @@
+@import 'compass/reset';
+@import 'compass/reset/utilities';
+
+@include global-reset;
+
+body {
+  background: $bg_color;
+  font-family: Helvetica, Arial;
+}

@@ -1,0 +1,41 @@
+/** ------------------------------
+ * Header
+ * ------------------------------- */
+body > header {
+  @include container;
+  margin-top: 40px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  
+  hgroup {
+    -webkit-box-flex: 1;
+    vertical-align: top;    
+
+    h1 {
+      background: image-url('logo.png') 0 0 no-repeat;
+      width: 256px;
+      height: 56px;
+      text-indent: -99999px;
+      display: block;
+    }
+  }
+
+  form {
+    width: 38.750em;
+    border: 1px solid $border_color;    
+
+    fieldset {
+
+      legend { display: none; }
+
+      input {
+        border: 0;
+        background: transparent;
+        width: 90%;
+        height: 2.9em;
+        margin-left: 1.250em;
+        font-size: 1.250em;
+      }
+    }
+  }
+}
