@@ -1,0 +1,9 @@
+---
+es:
+
+  # app config
+  # -----------------------------------------------------
+  title        : 'Eurodance.com.br - Espanhol'
+  description  : 'Eurodance site'
+  keywords     : 'eurodance, dj sound'
+  search_value : 'Busque por exemplo: Masterboy'

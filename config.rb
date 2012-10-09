@@ -12,6 +12,11 @@ set :build_dir , "build/public"
 activate :livereload, :apply_js_live => true
 
 # ---------------------------------
+# Localization
+# ---------------------------------
+activate :i18n, :mount_at_root => false
+
+# ---------------------------------
 # Helpers
 # ---------------------------------
 helpers do
