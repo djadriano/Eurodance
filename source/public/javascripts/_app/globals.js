@@ -4,7 +4,7 @@
 	  Models      : {},
 	  Views       : {},
 	  Collections : {},
-	  Mixins 			: {},	  
+	  Mixins 			: {},
 	  Routes      : {}
 	};
 
