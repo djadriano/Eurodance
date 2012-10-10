@@ -19,7 +19,7 @@
   <link rel="shortcut icon" href="<%= data.app.assets.favicon %>">
   
   <!-- stylesheet -->
-  <%= stylesheet_link_tag 'pages/' + page_classes %>
+  <%= stylesheet_link_tag 'pages/index' %>
   
   <!-- javascript: head -->
   <%= javascript_include_tag 'head' %>
@@ -42,8 +42,7 @@
 <!-- wrapper
 ========================================================================================================= /// -->
 <div class="wrapper">
-<%= yield %>
-
+  <%= yield %>
 </div>
 
 <hr>
@@ -54,8 +53,7 @@
 
 <!-- javascripts
 ========================================================================================================= /// -->
-<%= javascript_include_tag 'main' %>
+<%= javascript_include_tag 'app' %>
 <script>EURODANCECOMBR.config = <%= data.app.to_json %>;</script>
-  
 </body>
 </html>
