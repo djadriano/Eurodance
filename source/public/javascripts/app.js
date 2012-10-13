@@ -1,7 +1,3 @@
-// ---------------------------
-// Create Namespace
-// ---------------------------
-
 window.EURODANCECOMBR = {};
 
 // ---------------------------
@@ -14,4 +10,3 @@ window.EURODANCECOMBR = {};
 //= require "_vendors/core/jquery"
 //= require "_vendors/core/backbone"
 //= require "_vendors/shared/mixins"
-//= require "initializer"

@@ -19,13 +19,14 @@
   <link rel="shortcut icon" href="<%= data.app.assets.favicon %>">
   
   <!-- stylesheet -->
-  <%= stylesheet_link_tag 'pages/index' %>
+  <%= stylesheet_link_tag 'pages/' + path_assets %>
   
   <!-- javascript: head -->
   <%= javascript_include_tag 'head' %>
 
   <!-- title -->
   <title><%= I18n.t(:title) %></title>
+  
   <%= yield_content :assets %>
 </head>
 
@@ -35,7 +36,6 @@
 
 <!-- Header -->
 <%= partial "shared/header" %>
-
 
 <hr>
   

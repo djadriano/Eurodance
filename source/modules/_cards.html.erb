@@ -1,0 +1,12 @@
+<section class="artists full">
+  <ul>
+    <% 5.times do |num| %>
+      <li>
+        <figure class="card_artists">
+          <%= image_tag lorem.image('100x100', :random_color => true) %>
+          <figcaption class="card_artists_legend">fun factory</figcaption>
+        </figure>
+      </li>
+    <% end %>
+  </ul>
+</section>

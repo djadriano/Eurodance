@@ -27,20 +27,19 @@ helpers do
   def server_name
     env['SERVER_NAME'] || 'localhost'
   end
-  
-  def body_page_classes
-    path = request.path_info.dup
-    path << settings.index_file if path.match(%r{/$})
-    path = path.gsub(%r{^/}, '')
 
-    classes = []
-    parts = path.split('.')[0].split('/')
-    parts.shift(1)
-    parts.each_with_index { |path, i| 
-      classes << parts.first(i+1).join('_') 
-    }
+  # method for get stylesheets and javascripts of template
+  def path_assets
+    path     = request.path
+    arr_path = path.split('.')[0].split('/')
 
-    classes.join(' ')
+    if arr_path.length == 1
+      arr_path[0]
+    elsif arr_path.length == 2
+      arr_path[1]      
+    else
+      arr_path[1]
+    end
   end
   
 end
