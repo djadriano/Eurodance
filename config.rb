@@ -23,7 +23,7 @@ helpers do
   def timestamp
     Time.now.to_i
   end
-  
+
   def server_name
     env['SERVER_NAME'] || 'localhost'
   end
@@ -36,12 +36,12 @@ helpers do
     if arr_path.length == 1
       arr_path[0]
     elsif arr_path.length == 2
-      arr_path[1]      
-    else
       arr_path[1]
+    else
+      arr_path[1] + '/' + arr_path[2]
     end
   end
-  
+
 end
 
 # ---------------------------------
