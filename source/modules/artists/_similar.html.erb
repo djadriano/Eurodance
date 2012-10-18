@@ -1,0 +1,13 @@
+<section class="artist_similar">
+  <h1>Artistas Relacionados</h1>
+  <ul>
+    <% 5.times do |num| %>
+      <li>
+        <figure>
+          <%= image_tag lorem.image('100x100', :random_color => true) %>
+          <figcaption>fun factory</figcaption>
+        </figure>
+      </li>
+    <% end %>
+  </ul>
+</section>
