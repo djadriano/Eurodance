@@ -50,13 +50,13 @@ end
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
-  
+
   # Minify Javascript on build
   activate :minify_javascript
-  
+
   # Use relative URLs
   activate :relative_assets
-  
+
   # Compress PNGs after build
   activate :smusher
 end

@@ -1,7 +1,11 @@
+//= require _app/templates/teste
+
 EURODANCECOMBR.IndexView = Backbone.View.extend({
-  
+
+  template: JST[ '_app/templates/teste' ],
+
   initialize : function() {
-    console.log('index view');
+    $( 'body' ).append( this.template( { name : 'Adriano' } ) );
   }
 
 });
