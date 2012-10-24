@@ -1,11 +1,11 @@
 <header>
   <hgroup>
-    <h1><%= data.app.title %></h1>
+    <h1><%= I18n.t(:title) %></h1>
   </hgroup>
   <form action="#" method="get" accept-charset="utf-8" id="search_form">
     <fieldset>
       <legend>Faça sua busca</legend>
-      <input type="text" id="search_field" name="search_field" placeholder="<%= data.app.search_value %>">
+      <input type="text" id="search_field" name="search_field" placeholder="<%= I18n.t(:search_value) %>">
     </fieldset>
   </form>
 </header>
