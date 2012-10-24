@@ -14,7 +14,7 @@ activate :livereload, :apply_js_live => true
 # ---------------------------------
 # Localization
 # ---------------------------------
-activate :i18n, :mount_at_root => false
+activate :i18n, :mount_at_root => :pt
 
 # ---------------------------------
 # Helpers
@@ -30,15 +30,13 @@ helpers do
 
   # method for get stylesheets and javascripts of template
   def path_assets
-    path     = request.path
-    arr_path = path.split('.')[0].split('/')
+    arr_classes = page_classes.split( ' ' )
 
-    if arr_path.length == 1
-      arr_path[0]
-    elsif arr_path.length == 2
-      arr_path[1]
+    if arr_classes.length < 2
+      arr_classes[ 0 ]
     else
-      arr_path[1] + '/' + arr_path[2]
+      arr_section = arr_classes[ 1 ].split( '_' )
+      arr_section[ 1 ]
     end
   end
 
