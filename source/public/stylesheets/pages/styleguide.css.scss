@@ -7,3 +7,23 @@
  | */
 
  @import 'core/base';
+
+/*
+ | ------------------------------------------------------------
+ |  Below contains the styleguide elements
+ | ------------------------------------------------------------
+ | */
+
+ .styleguide {
+
+  .styleguide_title {
+    border-bottom: 0.0625em solid $color_gray;
+  }
+
+  .blocks {
+    margin: $space_size3 0;
+    padding-bottom: $space_size3;
+    border-bottom: 0.0625em solid $color_gray;
+  }
+
+ }
