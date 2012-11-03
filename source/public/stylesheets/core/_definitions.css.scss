@@ -40,10 +40,21 @@ $color_white      : #ffffff;
 | ------------------------------------------------------------
 | */
 
-$space_size1 : 0.3125em;
-$space_size2 : 0.625em;
-$space_size3 : 1.25em;
-$space_size4 : 2.5em;
+$space_size_1 : 0.3125em;
+$space_size_2 : 0.625em;
+$space_size_3 : 1.25em;
+$space_size_4 : 2.5em;
+
+/*
+| ------------------------------------------------------------
+|  default font sizes
+| ------------------------------------------------------------
+| */
+
+$font_size_1: 0.75em;
+$font_size_2: 1.6875em;
+$font_size_3: 3em;
+$font_size_4: 4.5em;
 
 /*
 | ------------------------------------------------------------
@@ -55,3 +66,16 @@ $space_size4 : 2.5em;
   max-width: 61.75em;
   margin: auto;
  }
+
+ /*
+| ------------------------------------------------------------
+|  Titles / Headings class
+| ------------------------------------------------------------
+| */
+
+.title { font-family: Helvetica; }
+
+.title_small  { font-size: $font_size_1; }
+.title_medium { font-size: $font_size_2; }
+.title_large  { font-size: $font_size_3; }
+.title_bigger { font-size: $font_size_4; }
