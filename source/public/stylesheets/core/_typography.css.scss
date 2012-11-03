@@ -13,3 +13,42 @@
  | */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+
+/*
+| ------------------------------------------------------------
+|  Set default text font for the application
+| ------------------------------------------------------------
+| */
+
+body { 
+  font-family: $font_type_default; 
+  font-size: 100%;
+}
+
+/*
+| ------------------------------------------------------------
+|  Titles / Headings class
+| ------------------------------------------------------------
+| */
+
+.title { 
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;  
+}
+
+.title_small { 
+  @extend .title;
+  font-size: $font_size_2;
+}
+
+.title_medium { 
+  @extend .title;  
+  font-size: $font_size_3; 
+}
+
+.title_large { 
+  @extend .title;  
+  font-size: $font_size_4; 
+  line-height: 1.2em;
+}

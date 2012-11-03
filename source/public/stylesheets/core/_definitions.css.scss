@@ -8,19 +8,10 @@
 
 /*
  | ------------------------------------------------------------
- |  Set box sizing for all elements
+ |  Define default text font for the application
  | ------------------------------------------------------------
  | */
-
-* { @include box-sizing(border-box); }
-
-/*
- | ------------------------------------------------------------
- |  Hide the all legend and hr elements
- | ------------------------------------------------------------
- | */
-
-legend, hr { display: none; }
+$font_type_default : 'Helvetica', 'Arial', sans-serif; 
 
 /*
  | ------------------------------------------------------------
@@ -40,10 +31,11 @@ $color_white      : #ffffff;
 | ------------------------------------------------------------
 | */
 
-$space_size_1 : 0.3125em;
-$space_size_2 : 0.625em;
-$space_size_3 : 1.25em;
-$space_size_4 : 2.5em;
+$space_size_1       : 0.3125em;
+$space_size_2       : 0.625em;
+$space_size_3       : 1.25em;
+$space_size_4       : 2.5em;
+$space_size_default : 1em;
 
 /*
 | ------------------------------------------------------------
@@ -52,9 +44,31 @@ $space_size_4 : 2.5em;
 | */
 
 $font_size_1: 0.75em;
-$font_size_2: 1.6875em;
+$font_size_2: 1.875em;
 $font_size_3: 3em;
 $font_size_4: 4.5em;
+
+/*
+ | ------------------------------------------------------------
+ |  Set box sizing for all elements
+ | ------------------------------------------------------------
+ | */
+
+* { 
+  @include box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+p { padding: .5em 0; }
+
+/*
+ | ------------------------------------------------------------
+ |  Hide the all legend and hr elements
+ | ------------------------------------------------------------
+ | */
+
+legend, hr { display: none; }
 
 /*
 | ------------------------------------------------------------
@@ -66,16 +80,3 @@ $font_size_4: 4.5em;
   max-width: 61.75em;
   margin: auto;
  }
-
- /*
-| ------------------------------------------------------------
-|  Titles / Headings class
-| ------------------------------------------------------------
-| */
-
-.title { font-family: Helvetica; }
-
-.title_small  { font-size: $font_size_1; }
-.title_medium { font-size: $font_size_2; }
-.title_large  { font-size: $font_size_3; }
-.title_bigger { font-size: $font_size_4; }

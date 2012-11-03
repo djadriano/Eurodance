@@ -18,12 +18,18 @@
 
   .styleguide_title {
     border-bottom: 0.0625em solid $color_gray;
+    padding: $space_size_default 0;
+    color: $color_purple;
   }
 
   .blocks {
     margin: $space_size_3 0;
     padding-bottom: $space_size_3;
     border-bottom: 0.0625em solid $color_gray;
+
+    header {
+      padding-bottom: $space_size_3;      
+    }
   }
 
  }
