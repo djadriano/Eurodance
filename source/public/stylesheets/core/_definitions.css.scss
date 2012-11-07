@@ -83,6 +83,7 @@ legend, hr { display: none; }
 | */
 
  .holder {
-  max-width: 61.75em;
-  margin: auto;
+  // max-width: 61.75em !important;
+  max-width: 90% !important;  
+  margin: auto !important;
  }
