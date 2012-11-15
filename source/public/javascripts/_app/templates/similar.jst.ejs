@@ -1,0 +1,11 @@
+<h1>Artistas Relacionados</h1>
+<ul>
+  <% _.each(data, function( item ) { %>
+    <li>
+      <figure>
+        <img src="<%= item.image[ 1 ][ '#text' ] %>">
+        <figcaption><%= item.name %></figcaption>
+      </figure>
+    </li>
+  <% }) %>
+</ul>

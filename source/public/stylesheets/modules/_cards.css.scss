@@ -1,0 +1,49 @@
+/*
+ | ------------------------------------------------------------
+ |  Cards.css
+ |
+ |  Contains the stylesheet of artists cards module
+ | ------------------------------------------------------------
+ |*/
+
+.artists_preview {
+  line-height: 0;
+  -webkit-column-width: 15.75em;
+  -webkit-column-count: 10;
+  -webkit-column-gap: 0px;
+  -webkit-column-fill: auto;
+  -webkit-column-break-inside: avoid;
+  width: 100%;
+  height: 100%;
+}
+
+ .artists_card {
+  position: relative;
+  vertical-align: top;  
+
+  figcaption {
+    @include transition(all 300ms linear);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;    
+    opacity: 0;
+    line-height: 1em;
+    color: $color_purple;
+  }
+
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  &:hover {
+    figcaption {
+      opacity: 0.8;
+    }
+  }
+ }

@@ -8,7 +8,7 @@
 
  body > header {
   @include display-box;
-  @include box-orient(horizontal);  
+  @include box-orient(vertical);  
   @include box-pack(center);
   @include box-align(center);
   background: $color_gray_light;
@@ -42,9 +42,7 @@
  | */
 
  .search_form {
-  position: absolute;
-  bottom: 0;
-  right: 0.625em;
+  margin-top: 1.6em;
 
   fieldset {
     border: 0;

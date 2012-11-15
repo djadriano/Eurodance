@@ -1,0 +1,1 @@
+EURODANCECOMBR.CardsModel = Backbone.Model.extend({});
