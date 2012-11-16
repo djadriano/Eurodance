@@ -9,7 +9,12 @@ EURODANCECOMBR.CardsView = Backbone.View.extend({
     _.bindAll( this, 'render' );
 
     this.collection.on( 'add', this.render );
-    this.collection.fetch();
+    this.collection.fetch({
+      data : { 
+        page    : Math.floor( ( Math.random()*100 ) +1 )
+        , limit : 20
+      }
+    });
 
   },
 

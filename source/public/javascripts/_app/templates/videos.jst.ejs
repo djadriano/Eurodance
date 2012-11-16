@@ -1,0 +1,10 @@
+<ul>
+  <% _.each(data, function(item) { %>
+    <li>
+      <figure class="">
+        <img src="<%= item['media$group']['media$thumbnail'][1]['url'] %>" alt="<%= item['title']['$t'] %>">
+        <figcaption class=""><%= item['title']['$t'] %></figcaption>
+      </figure>
+    </li>
+  <% }) %>
+</ul>

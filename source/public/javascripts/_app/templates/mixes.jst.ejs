@@ -1,0 +1,14 @@
+<ul>
+  <% _.each(data, function(item) { %>
+    <li>
+      <figure class="">
+        <% if ( item.artwork_url === null ) { %>
+          <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
+        <% } else { %>
+          <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
+        <% } %>
+        <figcaption class=""><%= item.title %></figcaption>
+      </figure>
+    </li>
+  <% }) %>
+</ul>
