@@ -20,13 +20,16 @@
 //= require "_app/collections/mp3"
 //= require "_app/views/mp3"
 
+//= require "_app/collections/tweets"
+//= require "_app/views/tweets"
+
 //= require "_app/routers/app"
 
 //= require_self
 
 $(function() {
 
-  var artist_param = 'taleesa';
+  var artist_param = 'cascada';
 
   // Cards initialize
   new EURODANCECOMBR.CardsView({
@@ -51,10 +54,16 @@ $(function() {
     , artist   : artist_param
   });
 
+  // Tweets
+  new EURODANCECOMBR.TweetsView({ 
+    collection : new EURODANCECOMBR.TweetsCollection
+    , artist : artist_param 
+  });
+
   // Mp3
   new EURODANCECOMBR.Mp3View({
     collection : new EURODANCECOMBR.Mp3Collection
     , artist   : artist_param
-  });  
+  });
 
 });
