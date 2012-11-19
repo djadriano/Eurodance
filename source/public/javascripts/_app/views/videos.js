@@ -11,7 +11,7 @@ EURODANCECOMBR.VideosView = Backbone.View.extend({
 
     this.collection.on( 'add', this.render );
     this.collection.fetch({
-      data : { q : self.options.artist }
+      data : { name : self.options.artist }
     });
 
   }

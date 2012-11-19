@@ -1,0 +1,10 @@
+<h2>Total de <%= data.total %> foto(s)</h2>
+<ul>
+  <% _.each(data.images, function(item) { %>
+    <li>
+      <figure class="">
+        <img src="<%= item.url %>" alt="">
+      </figure>
+    </li>
+  <% }) %>
+</ul>

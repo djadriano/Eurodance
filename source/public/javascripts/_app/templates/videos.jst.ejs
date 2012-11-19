@@ -1,9 +1,10 @@
+<h2>Total de <%= data.total %> vídeo(s)</h2>
 <ul>
-  <% _.each(data, function(item) { %>
+  <% _.each(data.video, function(item) { %>
     <li>
       <figure class="">
-        <img src="<%= item['media$group']['media$thumbnail'][1]['url'] %>" alt="<%= item['title']['$t'] %>">
-        <figcaption class=""><%= item['title']['$t'] %></figcaption>
+        <img src="<%= item.image_url %>" alt="<%= item.title %>">
+        <figcaption class=""><%= item.title %></figcaption>
       </figure>
     </li>
   <% }) %>

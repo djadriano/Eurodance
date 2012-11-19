@@ -19,31 +19,42 @@
 
  .artists_card {
   position: relative;
-  vertical-align: top;  
+  @include translate3d(0);
 
-  figcaption {
-    @include transition(all 300ms linear);
+  .artists_card_legend {
+    @include transition(all 200ms ease-in-out);
     position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
+    background: $color_purple;
     width: 100%;
     height: 100%;
-    display: block;    
+    display: inline-block;    
     opacity: 0;
-    line-height: 1em;
     color: $color_purple;
+    line-height: 1.3em;
+    vertical-align: middle;
+    padding: 0.625em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
   }
 
   img {
+    @include transition(all 200ms ease-in-out);
     width: 100% !important;
     max-width: 100% !important;
     max-height: 100% !important;
   }
 
   &:hover {
-    figcaption {
-      opacity: 0.8;
+    .artists_card_legend {
+      opacity: 0.85;
+      @include scale(0.92);
+    }
+
+    img {
+      @include scale(0.92);
     }
   }
- }
+}

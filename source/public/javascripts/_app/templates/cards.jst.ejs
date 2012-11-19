@@ -1,6 +1,10 @@
 <% _.each(data, function(item) { %>
-  <figure class="artists_card">
-    <img src="<%= item.image[ 3 ][ '#text' ] %>">
-    <figcaption class="artists_card_legend"><%= item.name %></figcaption>
-  </figure>
+  <% if ( item.image[ 3 ][ '#text' ] != '' ) { %>
+    <a href="/a/#!/<%= item.name %>">
+      <figure class="artists_card">
+        <img src="<%= item.image[ 3 ][ '#text' ] %>">
+        <figcaption class="artists_card_legend"><%= item.name %></figcaption>
+      </figure>
+    </a>
+  <% } %>
 <% }) %>

@@ -20,6 +20,9 @@
 //= require "_app/collections/mp3"
 //= require "_app/views/mp3"
 
+//= require "_app/collections/photos"
+//= require "_app/views/photos"
+
 //= require "_app/collections/tweets"
 //= require "_app/views/tweets"
 
@@ -29,7 +32,7 @@
 
 $(function() {
 
-  var artist_param = 'cascada';
+  var artist_param = 'ace of base';
 
   // Cards initialize
   new EURODANCECOMBR.CardsView({
@@ -37,33 +40,39 @@ $(function() {
   });
 
   // Artist initialize
-  new EURODANCECOMBR.DescriptionView({
-    collection : new EURODANCECOMBR.DescriptionCollection
-    , artist   : artist_param
-  });
+  // new EURODANCECOMBR.DescriptionView({
+  //   collection : new EURODANCECOMBR.DescriptionCollection
+  //   , artist   : artist_param
+  // });
 
-  // Mixes
-  new EURODANCECOMBR.MixesView({
-    collection : new EURODANCECOMBR.MixesCollection
-    , artist   : artist_param
-  });
+  // // Mixes
+  // new EURODANCECOMBR.MixesView({
+  //   collection : new EURODANCECOMBR.MixesCollection
+  //   , artist   : artist_param
+  // });
 
-  // Videos
-  new EURODANCECOMBR.VideosView({
-    collection : new EURODANCECOMBR.VideosCollection
-    , artist   : artist_param
-  });
+  // // Videos
+  // new EURODANCECOMBR.VideosView({
+  //   collection : new EURODANCECOMBR.VideosCollection
+  //   , artist   : artist_param
+  // });
 
-  // Tweets
-  new EURODANCECOMBR.TweetsView({ 
-    collection : new EURODANCECOMBR.TweetsCollection
-    , artist : artist_param 
-  });
+  // // Photos
+  // new EURODANCECOMBR.PhotosView({
+  //   collection : new EURODANCECOMBR.PhotosCollection
+  //   , artist   : artist_param
+  // });  
 
-  // Mp3
-  new EURODANCECOMBR.Mp3View({
-    collection : new EURODANCECOMBR.Mp3Collection
-    , artist   : artist_param
-  });
+  // // Tweets
+  // new EURODANCECOMBR.TweetsView({ 
+  //   collection : new EURODANCECOMBR.TweetsCollection
+  //   , artist : artist_param 
+  // });
+
+  // // Mp3
+  // new EURODANCECOMBR.Mp3View({
+  //   collection : new EURODANCECOMBR.Mp3Collection
+  //   , artist   : artist_param
+  // });
 
 });

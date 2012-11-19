@@ -1,9 +1,9 @@
 EURODANCECOMBR.VideosCollection = Backbone.Collection.extend({
 
-  url : 'https://gdata.youtube.com/feeds/api/videos/-/music/eurodance?alt=json'
+  url : 'http://developer.echonest.com/api/v4/artist/video?api_key=HXWPESNZ5W478MK7U&format=json&start=0'
 
   , parse : function( response ) {
-    this.add( [ response.feed.entry ] );
+    this.add( [ response.response ] );
   }
 
 });
