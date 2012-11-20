@@ -15,6 +15,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 /*
+ | ------------------------------------------------------------
+ |  Load the icons fonts
+ | ------------------------------------------------------------
+ | */
+
+@include font-face("fontello", font-files("/public/fonts/fontello.woff", "/public/fonts/fontello.ttf", "/public/fonts/fontello.svg#fontello"));
+
+/*
 | ------------------------------------------------------------
 |  Set default text font for the application
 | ------------------------------------------------------------

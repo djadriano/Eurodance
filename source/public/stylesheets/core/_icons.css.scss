@@ -1,0 +1,55 @@
+/*
+ | ------------------------------------------------------------
+ |  Icons.css
+ |
+ |  Contains all icons used in application
+ | ------------------------------------------------------------
+ |*/
+
+@charset "UTF-8";
+
+[class*="icon_"] {
+  font-family: 'fontello';
+  display: inline-block;
+  font-style: normal;
+
+  &:before {
+    margin-right: 0.325em;
+  }
+
+  &.icon_right:before {
+    margin: 0 0 0 0.325em;
+  }  
+}
+
+.icon_twitter_1:before { content: '\54'; }
+.icon_youtube:before { content: '\55'; }
+.icon_chrome:before { content: '\5b'; }
+.icon_lastfm:before { content: '\6c'; }
+.icon_soundcloud:before { content: '\73'; }
+.icon_info:before { content: '\2139'; }
+.icon_home:before { content: '\2302'; }
+.icon_menu:before { content: '\2630'; }
+.icon_heart_empty:before { content: '\2661'; }
+.icon_heart:before { content: '\2665'; }
+.icon_note:before { content: '\266a'; }
+.icon_note_beamed:before { content: '\266b'; }
+.icon_th:before { content: '\268f'; }
+.icon_layout:before { content: '\e800'; }
+.icon_cog:before { content: '\2699'; }
+.icon_info_circled:before { content: '\e705'; }
+.icon_chat:before { content: '\e720'; }
+.icon_resize_full:before { content: '\e744'; }
+.icon_resize_small:before { content: '\e746'; }
+.icon_zoom_in:before { content: '\e750'; }
+.icon_zoom_out:before { content: '\e751'; }
+.icon_left_open_big:before { content: '\e765'; }
+.icon_right_open_big:before { content: '\e766'; }
+.icon_lastfm_circled:before { content: '\f322'; }
+.icon_videocam:before { content: '\1f3a5'; }
+.icon_calendar:before { content: '\1f4c5'; }
+.icon_mobile:before { content: '\1f4f1'; }
+.icon_camera:before { content: '\1f4f7'; }
+.icon_arrows_ccw:before { content: '\1f504'; }
+.icon_search:before { content: '\1f50d'; }
+.icon_clock:before { content: '\1f554'; }

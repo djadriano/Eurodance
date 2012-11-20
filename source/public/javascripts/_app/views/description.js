@@ -13,7 +13,10 @@ EURODANCECOMBR.DescriptionView = Backbone.View.extend({
 
     this.collection.on( 'add', this.render );
     this.collection.fetch({
-      data : { artist : self.options.artist }
+      data : { 
+        artist : self.options.artist
+        , lang : EURODANCECOMBR.config.lang
+      }
     });
 
   }

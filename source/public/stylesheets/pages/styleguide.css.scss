@@ -15,22 +15,40 @@
  | ------------------------------------------------------------
  | */
 
- .styleguide {
+.styleguide_title {
+  border-bottom: 0.0625em solid $color_gray;
+  padding: $space_size_default 0;
+  color: $color_purple;
+}
 
-  .styleguide_title {
-    border-bottom: 0.0625em solid $color_gray;
-    padding: $space_size_default 0;
-    color: $color_purple;
+.blocks {
+  margin: $space_size_3 0;
+  padding-bottom: $space_size_3;
+  border-bottom: 0.0625em solid $color_gray;
+
+  header {
+    padding-bottom: $space_size_3;      
   }
+}
 
-  .blocks {
-    margin: $space_size_3 0;
-    padding-bottom: $space_size_3;
-    border-bottom: 0.0625em solid $color_gray;
+.all_icons {
+  overflow: hidden;
+  list-style: none;
 
-    header {
-      padding-bottom: $space_size_3;      
+  li {
+    float: left;
+    margin: 0 0.625em 0.925em 0;
+    text-align: center;
+    font-size: 0.73em;
+    width: 10%;
+
+    [class*="icon_"] {
+      font-size: 2.5em;
+      display: block;
+      text-align: center;
+      margin-bottom: 0.3925em;
+
+      &:before { margin: 0; }
     }
   }
-
- }
+}

@@ -2,7 +2,7 @@
 
 EURODANCECOMBR.CardsView = Backbone.View.extend({
 
-  el : 'body'
+  el : '.artists_preview'
 
   , template: JST[ '_app/templates/cards' ]
 
@@ -17,7 +17,7 @@ EURODANCECOMBR.CardsView = Backbone.View.extend({
     this.collection.on( 'add', this.render );
     this.collection.fetch({
       data : { 
-        page    : Math.floor( ( Math.random()*100 ) +1 )
+        page    : Math.floor( ( Math.random() * 100 ), 2 )
         , limit : 20
       }
     });
@@ -25,17 +25,20 @@ EURODANCECOMBR.CardsView = Backbone.View.extend({
   },
 
   render : function( model ) {
-    $( '.artists_preview' ).append( this.template( { data : model.toJSON() } ) );
+    $( '.artists_preview_list' ).append( this.template( { data : model.toJSON() } ) );
   },
 
-  see_more : function() {
-    console.log('aaaa');
+  see_more : function( evt ) {
+    
+    evt.preventDefault();
+
     this.collection.fetch({
       data : { 
-        page    : 2
+        page    : Math.floor( ( Math.random() * 100 ), 2 )
         , limit : 20
       }
     });
+
   }
 
 });

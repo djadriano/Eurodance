@@ -1,4 +1,4 @@
-<div class="styleguide">
+<div class="styleguide holder">
   <header class="styleguide_title">
     <h1 class="title_medium">Styleguide - Eurodance.com.br</h1>    
   </header>
@@ -21,7 +21,29 @@
       <h2>Copy</h2>
     </header>
     <p>Aqua is a danish-norwegian dance-pop group, best known for their 1997 breakthrough single Barbie Girl. Initially forming as Joyspeed in 1989, the band was renamed Aqua in 1994 and achieved huge success across the globe in the late 1990s and early 2000s. The group managed to top the UK Singles Chart with their first three singles. The group released two albums: Aquarium in 1997 and Aquarius in 2000, before splitting up in July 2001. The group sold an estimated 33 million albums and singles, making them the most successful Danish band ever and the second most successful Norwegian band.</p>    
-  </section>  
+  </section>
+
+  <hr>
+
+  <section class="blocks">
+    <header>
+      <h2>Buttons</h2>
+    </header>
+    <p><a href="#" title="#" class="button">see more <i class="icon_arrows_ccw icon_right"></i></a> <a href="#" title="#" class="button"><i class="icon_th"></i> ver mais</a></p>
+  </section>
+
+  <hr>
+
+  <section class="blocks">
+    <header>
+      <h2>Icons</h2>
+    </header>
+    <ul class="all_icons">
+      <% data.styleguide.icons.each do |item| %>
+        <li><i class="<%= item %>"></i> .<%= item %></li>
+      <% end %>
+    </ul>
+  </section>    
 
   <hr>
 

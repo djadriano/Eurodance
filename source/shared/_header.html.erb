@@ -1,9 +1,9 @@
 <header>
-  <h1 class="header_logo"><%= I18n.t(:title) %></h1>
+  <h1 class="header_logo"><%= I18n.t(:config)[:title] %></h1>
   <form action="#" method="post" accept-charset="utf-8" class="search_form">
     <fieldset>
       <legend>Faça sua busca</legend>
-      <input type="text" class="search_form_field" name="search_field" placeholder="<%= I18n.t(:search_value) %>">
+      <input type="text" class="search_form_field" name="search_field" placeholder="<%= I18n.t(:config)[:search_value] %>">
     </fieldset>
   </form>
 </header>

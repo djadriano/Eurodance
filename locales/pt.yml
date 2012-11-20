@@ -1,9 +1,9 @@
 ---
 pt:
 
-  # app config
-  # -----------------------------------------------------
-  title        : 'Eurodance.com.br - Português'
-  description  : 'Eurodance site'
-  keywords     : 'eurodance, dj sound'
-  search_value : 'Busque por exemplo: Masterboy'
+  config:
+    title        : 'Eurodance.com.br - Português'
+    description  : 'Eurodance site'
+    keywords     : 'eurodance, dj sound'
+    search_value : 'Busque por exemplo: Masterboy'
+    lang         : 'pt'

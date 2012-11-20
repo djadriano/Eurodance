@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta http-equiv="cleartype"       content="on">
-  <meta name="description"           content="<%= I18n.t(:description) %>">
-  <meta name="keywords"              content="<%= I18n.t(:keywords) %>">
+  <meta name="description"           content="<%= I18n.t(:config)[:description] %>">
+  <meta name="keywords"              content="<%= I18n.t(:config)[:keywords] %>">
   
   <!-- facebook metatags -->
   <meta property="fb:app_id"      content="<%= data.app.facebook_tags.app_id %>" />
@@ -25,7 +25,7 @@
   <%= javascript_include_tag 'head' %>
 
   <!-- title -->
-  <title><%= I18n.t(:title) %></title>
+  <title><%= I18n.t(:config)[:title] %></title>
   
   <%= yield_content :assets %>
 </head>
@@ -48,6 +48,6 @@
 <!-- javascripts
 ========================================================================================================= /// -->
 <%= javascript_include_tag 'pages/' + path_assets %>  
-<script>EURODANCECOMBR.config = <%= data.app.to_json %>;</script>
+<script>EURODANCECOMBR.config = <%= I18n.t(:config).to_json %>;</script>
 </body>
 </html>
