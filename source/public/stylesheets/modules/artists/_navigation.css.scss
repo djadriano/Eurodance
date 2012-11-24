@@ -1,0 +1,32 @@
+/*
+ | ------------------------------------------------------------
+ |  Navigation.css
+ |
+ |  Contains the stylesheet of artists navigation module
+ | ------------------------------------------------------------
+ |*/
+
+.artist_navigation_links {
+  @include display-box;
+  @include box-orient(horizontal);
+  list-style: none;
+  border-top: 0.125em solid $color_purple;
+  border-bottom: 0.125em solid $color_purple;
+  padding: 0.625em 0;  
+
+  li {
+    @extend .title_small;
+    -webkit-box-flex: 1.0;
+    text-align: center;
+    text-transform: uppercase;
+
+    a {
+      color: $color_purple;
+
+      &:hover,
+      &.active {
+        border-bottom: 0.125em solid $color_purple;
+      }
+    }
+  }
+}

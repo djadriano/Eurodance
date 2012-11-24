@@ -17,7 +17,7 @@ EURODANCECOMBR.VideosView = Backbone.View.extend({
   }
 
   , render : function( model ) {
-    $( '.artists_videos' ).append( this.template( { data : model.toJSON() } ) );    
+    $( '.artist_videos' ).append( this.template( { data : model.toJSON() } ) );    
   }
 
 });

@@ -19,7 +19,7 @@ EURODANCECOMBR.TweetsView = Backbone.View.extend({
   }
 
   , render : function( model ) {
-    $( '.artists_tweets' ).append( this.template( { data : model.toJSON() } ) );
+    $( '.artist_tweets' ).append( this.template( { data : model.toJSON() } ) );
   }
 
 });

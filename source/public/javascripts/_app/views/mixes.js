@@ -17,7 +17,7 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
   }
 
   , render : function( model ) {
-    $( '.artists_mixes' ).append( this.template( { data : model.toJSON() } ) );    
+    $( '.artist_mixes' ).append( this.template( { data : model.toJSON() } ) );    
   }
 
 });

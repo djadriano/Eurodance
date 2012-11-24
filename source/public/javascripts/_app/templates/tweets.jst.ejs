@@ -1,9 +1,13 @@
-<ul>
+<ul class="artist_tweets_list">
   <% _.each(data, function(item) { %>
     <li>
-      <img src="<%= item.profile_image_url %>" alt="<%= item.from_user %>">
-      @<%= item.from_user %><br>
-      <%= item.text %>
+      <figure class="artist_tweets_list_cover">
+        <img src="<%= item.profile_image_url %>" alt="<%= item.from_usertitle %>">
+        <figcaption class="artist_tweets_list_title">
+          <strong>@<%= item.from_user %></strong><br>
+          <%= item.text %>
+        </figcaption>
+      </figure>
     </li>
   <% }) %>
 </ul>

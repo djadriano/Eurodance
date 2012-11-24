@@ -32,7 +32,7 @@
 
 $(function() {
 
-  var artist_param = 'taleesa';
+  var artist_param = 'dj bobo';
 
   // new EURODANCECOMBR.CardsView({
   //   collection : new EURODANCECOMBR.CardsCollection
@@ -43,29 +43,29 @@ $(function() {
     , artist   : artist_param
   });
 
-  // new EURODANCECOMBR.MixesView({
-  //   collection : new EURODANCECOMBR.MixesCollection
-  //   , artist   : artist_param
-  // });
+  new EURODANCECOMBR.MixesView({
+    collection : new EURODANCECOMBR.MixesCollection
+    , artist   : artist_param
+  });
 
-  // new EURODANCECOMBR.VideosView({
-  //   collection : new EURODANCECOMBR.VideosCollection
-  //   , artist   : artist_param
-  // });
+  new EURODANCECOMBR.VideosView({
+    collection : new EURODANCECOMBR.VideosCollection
+    , artist   : artist_param
+  });
 
   // new EURODANCECOMBR.PhotosView({
   //   collection : new EURODANCECOMBR.PhotosCollection
   //   , artist   : artist_param
   // });
 
-  // new EURODANCECOMBR.TweetsView({ 
-  //   collection : new EURODANCECOMBR.TweetsCollection
-  //   , artist : artist_param 
-  // });
+  new EURODANCECOMBR.TweetsView({ 
+    collection : new EURODANCECOMBR.TweetsCollection
+    , artist : artist_param 
+  });
 
-  // new EURODANCECOMBR.Mp3View({
-  //   collection : new EURODANCECOMBR.Mp3Collection
-  //   , artist   : artist_param
-  // });
+  new EURODANCECOMBR.Mp3View({
+    collection : new EURODANCECOMBR.Mp3Collection
+    , artist   : artist_param
+  });
 
 });
