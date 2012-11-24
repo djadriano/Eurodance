@@ -1,0 +1,28 @@
+/*
+ | ------------------------------------------------------------
+ |  Description.css
+ |
+ |  Contains the stylesheet of artists description module
+ | ------------------------------------------------------------
+ |*/
+
+.artist_bio {
+  @include display-box;
+  @include box-orient(horizontal);
+}
+
+.artist_photo {
+  max-width: 31.25em;
+  margin-right: 1.2em;
+
+  figcaption { display: none; }
+}
+
+.artist_info {
+  @include box-flex(1);
+}
+
+.artist_description {
+  color: $color_gray_dark;
+  border-bottom: 0.125em solid $color_gray;
+}

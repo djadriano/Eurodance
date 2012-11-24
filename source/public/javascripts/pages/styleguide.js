@@ -32,16 +32,16 @@
 
 $(function() {
 
-  var artist_param = 'lasgo';
+  var artist_param = 'taleesa';
 
-  new EURODANCECOMBR.CardsView({
-    collection : new EURODANCECOMBR.CardsCollection
-  });
-
-  // new EURODANCECOMBR.DescriptionView({
-  //   collection : new EURODANCECOMBR.DescriptionCollection
-  //   , artist   : artist_param
+  // new EURODANCECOMBR.CardsView({
+  //   collection : new EURODANCECOMBR.CardsCollection
   // });
+
+  new EURODANCECOMBR.DescriptionView({
+    collection : new EURODANCECOMBR.DescriptionCollection
+    , artist   : artist_param
+  });
 
   // new EURODANCECOMBR.MixesView({
   //   collection : new EURODANCECOMBR.MixesCollection
@@ -56,16 +56,16 @@ $(function() {
   // new EURODANCECOMBR.PhotosView({
   //   collection : new EURODANCECOMBR.PhotosCollection
   //   , artist   : artist_param
-  // });  
+  // });
 
   // new EURODANCECOMBR.TweetsView({ 
   //   collection : new EURODANCECOMBR.TweetsCollection
   //   , artist : artist_param 
   // });
 
-  new EURODANCECOMBR.Mp3View({
-    collection : new EURODANCECOMBR.Mp3Collection
-    , artist   : artist_param
-  });
+  // new EURODANCECOMBR.Mp3View({
+  //   collection : new EURODANCECOMBR.Mp3Collection
+  //   , artist   : artist_param
+  // });
 
 });

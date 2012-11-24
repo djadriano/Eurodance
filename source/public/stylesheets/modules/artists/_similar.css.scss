@@ -1,0 +1,32 @@
+/*
+ | ------------------------------------------------------------
+ |  Similar.css
+ |
+ |  Contains the stylesheet of artists similar module
+ | ------------------------------------------------------------
+ |*/
+
+.artist_similar { margin-top: 1.2em; }
+
+.artist_similar_list {
+  @include display-box;
+  @include box-orient(horizontal);
+  list-style: none;
+  margin-top: 0.625em;
+
+  figure {
+    margin-right: 0.625em;
+
+    img {
+      width: 5em;
+      height: 5em;
+      max-width: 100%;      
+    }
+
+    figcaption {
+      width: 4em;
+      font-size: 0.9em;
+      color: $color_gray_dark;
+    }
+  }
+}

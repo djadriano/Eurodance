@@ -2,5 +2,8 @@
   <img src="<%= data.image[ 4 ][ '#text' ] %>">
   <figcaption class="card_artists_legend"><%= data.name %></figcaption>
 </figure>
-<h1><%= data.name %></h1>
-<p><%= data.bio.summary %></p>
+<div class="artist_info">
+  <h1 class="title_large"><%= data.name %></h1>
+  <p class="artist_description"><%= data.bio.summary %></p>
+  <section class="artist_similar"></section>
+</div>

@@ -12,12 +12,10 @@
 }
 
 .artists_preview_list {
+  @include column-count(20);
+  @include column-width(15.75em);
+  @include column-gap(0);
   line-height: 0;
-  -webkit-column-width: 15.75em;
-  -webkit-column-count: 10;
-  -webkit-column-gap: 0px;
-  -webkit-column-fill: auto;
-  -webkit-column-break-inside: avoid;
 }
 
 .artists_card {
