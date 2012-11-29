@@ -1,14 +1,12 @@
-<ul class="artist_mixes_list">
-  <% _.each(data, function(item) { %>
-    <li>
-      <figure class="artist_mixes_list_cover">
-        <% if ( item.artwork_url === null ) { %>
-          <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
-        <% } else { %>
-          <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
-        <% } %>
-        <figcaption class="artist_mixes_list_title"><%= item.title %></figcaption>
-      </figure>
-    </li>
-  <% }) %>
-</ul>
+<% _.each(data.collection, function(item) { %>
+  <li>
+    <figure class="artist_mixes_list_cover">
+      <% if ( item.artwork_url === null ) { %>
+        <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
+      <% } else { %>
+        <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
+      <% } %>
+      <figcaption class="artist_mixes_list_title"><%= item.title %></figcaption>
+    </figure>
+  </li>
+<% }) %>
