@@ -5,14 +5,15 @@
 
 //= require "_vendors/shared/mixins"
 
-//= require "_app/views/index"
+//= require "_app/collections/cards"
+//= require "_app/views/cards"
 
-//= require "_app/routers/app"
+//= require "_app/views/index"
 
 //= require_self
 
 $(function() {
-  new EURODANCECOMBR.IndexView;
-  new EURODANCECOMBR.Routes;
-  Backbone.history.start();
+  new EURODANCECOMBR.CardsView({
+    collection : new EURODANCECOMBR.CardsCollection
+  });
 });

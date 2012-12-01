@@ -32,7 +32,7 @@
 
 $(function() {
 
-  var artist_param = 'cascada';
+  var artist_param = 'lasgo';
 
   // new EURODANCECOMBR.CardsView({
   //   collection : new EURODANCECOMBR.CardsCollection
@@ -43,20 +43,20 @@ $(function() {
   //   , artist   : artist_param
   // });
 
-  new EURODANCECOMBR.MixesView({
-    collection : new EURODANCECOMBR.MixesCollection
-    , artist   : artist_param
-  });
+  // new EURODANCECOMBR.MixesView({
+  //   collection : new EURODANCECOMBR.MixesCollection
+  //   , artist   : artist_param
+  // });
 
   // new EURODANCECOMBR.VideosView({
   //   collection : new EURODANCECOMBR.VideosCollection
   //   , artist   : artist_param
   // });
 
-  // new EURODANCECOMBR.PhotosView({
-  //   collection : new EURODANCECOMBR.PhotosCollection
-  //   , artist   : artist_param
-  // });
+  new EURODANCECOMBR.PhotosView({
+    collection : new EURODANCECOMBR.PhotosCollection
+    , artist   : artist_param
+  });
 
   // new EURODANCECOMBR.TweetsView({ 
   //   collection : new EURODANCECOMBR.TweetsCollection

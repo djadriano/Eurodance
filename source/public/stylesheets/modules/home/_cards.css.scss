@@ -20,7 +20,7 @@
 
 .artists_card {
   position: relative;
-  @include translate3d(0);
+  @include translate3d(0, 0, 0);
 
   .artists_card_legend {
     @include transition(all 200ms ease-in-out);

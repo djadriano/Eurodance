@@ -6,7 +6,10 @@
       <% } else { %>
         <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
       <% } %>
-      <figcaption class="artist_mixes_list_title"><%= item.title %></figcaption>
+      <figcaption class="artist_mixes_list_title">
+        <strong><%= item.user.username %></strong><br>
+        <%= item.title %>
+      </figcaption>
     </figure>
   </li>
 <% }) %>

@@ -29,11 +29,14 @@
   -webkit-box-align: center;
 
   img {
+    @include border-radius(3px);
     width: 3em;
     height: 3em;
     max-width: 100%;
     margin-right: 0.625em; 
     -webkit-box-flex: 1.0;
+    border: 1px solid #e9e9e9;
+    padding: 0.225em;
   }
 
   .artist_tweets_list_title {
