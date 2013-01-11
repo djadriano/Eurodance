@@ -38,10 +38,10 @@ $(function() {
   //   collection : new EURODANCECOMBR.CardsCollection
   // });
 
-  // new EURODANCECOMBR.DescriptionView({
-  //   collection : new EURODANCECOMBR.DescriptionCollection
-  //   , artist   : artist_param
-  // });
+  new EURODANCECOMBR.DescriptionView({
+    collection : new EURODANCECOMBR.DescriptionCollection
+    , artist   : artist_param
+  });
 
   // new EURODANCECOMBR.MixesView({
   //   collection : new EURODANCECOMBR.MixesCollection
@@ -53,10 +53,10 @@ $(function() {
   //   , artist   : artist_param
   // });
 
-  new EURODANCECOMBR.PhotosView({
-    collection : new EURODANCECOMBR.PhotosCollection
-    , artist   : artist_param
-  });
+  // new EURODANCECOMBR.PhotosView({
+  //   collection : new EURODANCECOMBR.PhotosCollection
+  //   , artist   : artist_param
+  // });
 
   // new EURODANCECOMBR.TweetsView({ 
   //   collection : new EURODANCECOMBR.TweetsCollection

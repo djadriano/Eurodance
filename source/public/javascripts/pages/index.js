@@ -13,7 +13,7 @@
 //= require_self
 
 $(function() {
-  new EURODANCECOMBR.CardsView({
-    collection : new EURODANCECOMBR.CardsCollection
-  });
+  // new EURODANCECOMBR.CardsView({
+  //   collection : new EURODANCECOMBR.CardsCollection
+  // });
 });

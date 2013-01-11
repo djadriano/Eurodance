@@ -12,7 +12,7 @@
  | ------------------------------------------------------------
  | */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Source+Sans+Pro);
 
 /*
  | ------------------------------------------------------------
@@ -29,7 +29,7 @@
 | */
 
 body { 
-  font-family: $font_type_default; 
+  font-family: $font_type_default;
   font-size: 100%;
 }
 

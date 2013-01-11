@@ -42,19 +42,17 @@ helpers do
       asset_path  = ''
 
       arr_section.each_with_index do |lista, i|
-        if i > 0
-          if i == ( arr_section.length - 1 )
-            asset_path = asset_path + lista
-          else
-            asset_path = asset_path + lista + '/'
-          end
+        if i == ( arr_section.length - 1 )
+          asset_path = asset_path + lista
+        else
+          asset_path = asset_path + lista + '/'
         end
       end
 
       asset_path
 
     end
-  end  
+  end
 
 end
 
