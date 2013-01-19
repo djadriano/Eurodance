@@ -4,6 +4,6 @@
 </figure>
 <div class="artist_info">
   <h1 class="title_large"><%= data.name %></h1>
-  <p class="artist_description"><%= data.bio.content %></p>
+  <p class="artist_description"><%= data.bio.content.replace( new RegExp('\r?\n', 'g'), '<br />' ) %></p>
   <section class="artist_similar"></section>
 </div>

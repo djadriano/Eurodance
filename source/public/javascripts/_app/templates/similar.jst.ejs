@@ -2,10 +2,12 @@
 <ul class="artist_similar_list">
   <% _.each(data, function( item ) { %>
     <li>
-      <figure>
-        <img src="<%= item.image[ 2 ][ '#text' ] %>">
-        <figcaption><%= item.name %></figcaption>
-      </figure>
+      <a href="/a/#!/<%= item.name %>">
+        <figure>
+          <img src="<%= item.image[ 2 ][ '#text' ] %>">
+          <figcaption><%= item.name %></figcaption>
+        </figure>
+      </a>
     </li>
   <% }) %>
 </ul>

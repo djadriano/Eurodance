@@ -13,7 +13,7 @@ EURODANCECOMBR.DescriptionView = Backbone.View.extend({
 
     this.collection.on( 'add', this.render );
     this.collection.fetch({
-      data : { 
+      data : {
         artist : self.options.artist
         , lang : EURODANCECOMBR.config.lang
       }
@@ -24,8 +24,8 @@ EURODANCECOMBR.DescriptionView = Backbone.View.extend({
   , render : function( model ) {
     var similar = model.toJSON().similar;
 
-    $( '.artist_bio' ).append( this.template( { data : model.toJSON() } ) );
-    $( '.artist_similar' ).append( this.similar_template( { data : similar.artist } ) );    
+    $( '.artist_bio' ).html( this.template( { data : model.toJSON() } ) );
+    $( '.artist_similar' ).append( this.similar_template( { data : similar.artist } ) );
   }
 
 });

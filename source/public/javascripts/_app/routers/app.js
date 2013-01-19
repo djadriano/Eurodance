@@ -1,11 +1,14 @@
 EURODANCECOMBR.Routes = Backbone.Router.extend({
 
   routes: {
-    "!/artist/:query" : "artist"
+    "!/:query" : "artist"
   },
 
-  artist : function(a) {
-    console.log(a);
+  artist : function( name ) {
+    new EURODANCECOMBR.DescriptionView({
+      collection : new EURODANCECOMBR.DescriptionCollection(),
+      artist     : name
+    });
   }
 
 });
