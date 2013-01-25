@@ -18,7 +18,7 @@ EURODANCECOMBR.CardsView = Backbone.View.extend({
 
     this.collection.on( 'add', this.render );
     this.collection.fetch({
-      data : { 
+      data : {
         page    : this.current_page
         , limit : 30
       }
@@ -31,13 +31,13 @@ EURODANCECOMBR.CardsView = Backbone.View.extend({
   }
 
   , see_more : function( evt ) {
-    
+
     evt.preventDefault();
 
     this.current_page++;
 
     this.collection.fetch({
-      data : { 
+      data : {
         page    : this.current_page
         , limit : 30
       }

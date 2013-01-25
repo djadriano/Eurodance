@@ -7,6 +7,9 @@
 //= require "_app/collections/description"
 //= require "_app/views/description"
 
+//= require "_app/collections/mixes"
+//= require "_app/views/mixes"
+
 //= require "_app/routers/app"
 
 //= require_self

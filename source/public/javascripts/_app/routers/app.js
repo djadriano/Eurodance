@@ -9,6 +9,11 @@ EURODANCECOMBR.Routes = Backbone.Router.extend({
       collection : new EURODANCECOMBR.DescriptionCollection(),
       artist     : name
     });
+
+    new EURODANCECOMBR.MixesView({
+      collection : new EURODANCECOMBR.MixesCollection
+      , artist   : name
+    });
   }
 
 });
