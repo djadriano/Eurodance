@@ -2,7 +2,9 @@
 
 EURODANCECOMBR.VideosView = Backbone.View.extend({
 
-  template     : JST[ '_app/templates/videos' ]
+  // set the variables
+  el           : '.artist_navigation_content'
+  , template   : JST[ '_app/templates/videos' ]
   , initialize : function() {
 
     var self = this;
@@ -17,7 +19,7 @@ EURODANCECOMBR.VideosView = Backbone.View.extend({
   }
 
   , render : function( model ) {
-    $( '.artist_videos' ).append( this.template( { data : model.toJSON() } ) );    
+    this.$el.html( this.template( { data : model.toJSON() } ) );
   }
 
 });

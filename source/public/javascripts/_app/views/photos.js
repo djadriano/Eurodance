@@ -20,7 +20,7 @@ EURODANCECOMBR.PhotosView = Backbone.View.extend({
     this.collection.on( 'add', this.render );
 
     this.collection.fetch({
-      data : { 
+      data : {
         name    : self.options.artist
         , start : 0
       }
@@ -43,18 +43,18 @@ EURODANCECOMBR.PhotosView = Backbone.View.extend({
   }
 
   , see_more : function( evt ) {
-    
+
     evt.preventDefault();
 
     this.current_page++;
 
     this.collection.fetch({
-      data : { 
+      data : {
         name    : this.options.artist
         , start : ( this.items_per_page * this.current_page )
       }
     });
 
-  }  
+  }
 
 });

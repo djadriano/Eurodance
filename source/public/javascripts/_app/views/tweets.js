@@ -20,7 +20,7 @@ EURODANCECOMBR.TweetsView = Backbone.View.extend({
     this.collection.url = this.collection_url + '?callback=?'
 
     this.collection.fetch({
-      data : { 
+      data : {
         q                  : '&#34;' + this.options.artist + '&#34;'
         , rpp              : 20
         , include_entities : 'true'
@@ -41,12 +41,12 @@ EURODANCECOMBR.TweetsView = Backbone.View.extend({
   }
 
   , see_more : function( evt ) {
-    
+
     evt.preventDefault();
 
     this.collection.url = this.collection_url + this.next_page + '&callback=?';
     this.collection.fetch();
 
-  }  
+  }
 
 });

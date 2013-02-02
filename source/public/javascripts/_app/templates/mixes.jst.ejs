@@ -1,15 +1,40 @@
-<% _.each(data.collection, function(item) { %>
-  <li>
-    <figure class="artist_mixes_list_cover">
-      <% if ( item.artwork_url === null ) { %>
-        <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
-      <% } else { %>
-        <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
-      <% } %>
-      <figcaption class="artist_mixes_list_title">
-        <strong><%= item.user.username %></strong><br>
-        <%= item.title %>
-      </figcaption>
-    </figure>
-  </li>
-<% }) %>
+<% if( data.action === 'add' ) { %>
+  <section class="artist_mixes">
+    <div class="artist_mixes_content">
+      <ul class="artist_mixes_list">
+        <% _.each(data.collection, function(item) { %>
+          <li>
+            <figure class="artist_mixes_list_cover">
+              <% if ( item.artwork_url === null ) { %>
+                <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
+              <% } else { %>
+                <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
+              <% } %>
+              <figcaption class="artist_mixes_list_title">
+                <strong><%= item.user.username %></strong><br>
+                <%= item.title %>
+              </figcaption>
+            </figure>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <p class="center"><a href="#" class="next button">ver mais <i class="icon_arrows_ccw icon_right"></i></a></p>
+  </section>
+<% } else { %>
+  <% _.each(data.collection, function(item) { %>
+    <li>
+      <figure class="artist_mixes_list_cover">
+        <% if ( item.artwork_url === null ) { %>
+          <img src="<%= item.user.avatar_url %>" alt="<%= item.title %>">
+        <% } else { %>
+          <img src="<%= item.artwork_url %>" alt="<%= item.title %>">
+        <% } %>
+        <figcaption class="artist_mixes_list_title">
+          <strong><%= item.user.username %></strong><br>
+          <%= item.title %>
+        </figcaption>
+      </figure>
+    </li>
+  <% }) %>
+<% } %>

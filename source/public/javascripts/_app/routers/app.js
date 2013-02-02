@@ -5,6 +5,8 @@ EURODANCECOMBR.Routes = Backbone.Router.extend({
   },
 
   artist : function( name ) {
+    new EURODANCECOMBR.NavigationView({ artist : name });
+
     new EURODANCECOMBR.DescriptionView({
       collection : new EURODANCECOMBR.DescriptionCollection(),
       artist     : name
