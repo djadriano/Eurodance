@@ -1,0 +1,1 @@
+EURODANCECOMBR.MixesModel = Backbone.Model.extend({});

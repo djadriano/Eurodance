@@ -1,14 +1,9 @@
-//= require "_vendors/core/jquery"
-//= require "_vendors/core/underscore"
-//= require "_vendors/core/json2"
-//= require "_vendors/core/backbone"
-//= require "_vendors/shared/mixins"
-
 //= require "_app/views/navigation"
 
 //= require "_app/collections/description"
 //= require "_app/views/description"
 
+//= require "_app/models/mixes"
 //= require "_app/collections/mixes"
 //= require "_app/views/mixes"
 
@@ -20,6 +15,12 @@
 //= require_self
 
 $(function() {
+
+  window.mixes_view = new EURODANCECOMBR.MixesView({
+    collection : new EURODANCECOMBR.MixesCollection
+    , model    : new EURODANCECOMBR.MixesModel
+  });
+
   new EURODANCECOMBR.Routes();
   Backbone.history.start();
 });

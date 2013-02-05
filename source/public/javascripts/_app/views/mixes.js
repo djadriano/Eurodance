@@ -15,18 +15,22 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
   // constructor
   , initialize : function() {
 
-    _.bindAll( this, 'render', 'see_more' );
+    _.bindAll( this, 'render', 'see_more', 'get_content' );
+
+    this.listenTo( this.model, 'change:artist', this.get_content );
+
+  }
+
+  , get_content : function() {
+
+    this.collection = new EURODANCECOMBR.MixesCollection();
+    this.collection.on( 'add', this.render );
 
     this.has_render = false;
 
-    this.collection.on( 'add', this.render );
-
     this.collection.fetch({
-      data : { q : this.options.artist }
+      data : { q : this.model.get( 'artist' ) }
     });
-
-    this.$( '.next' ).show();
-
   }
 
   // render the results
@@ -57,7 +61,7 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
     }
 
     // update the has_render variable
-    this.has_render === false ? this.has_render = true : this.has_render;
+    this.has_render === false ? this.has_render = true : false;
 
   }
 
@@ -72,6 +76,7 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
   }
 
   , update_content : function( el, data_to_template ) {
+    this.$( '.next' ).show();
     el.html( this.template( { data : data_to_template } ) );
   }
 

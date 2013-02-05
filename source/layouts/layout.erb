@@ -6,7 +6,7 @@
   <meta http-equiv="cleartype"       content="on">
   <meta name="description"           content="<%= I18n.t(:config)[:description] %>">
   <meta name="keywords"              content="<%= I18n.t(:config)[:keywords] %>">
-  
+
   <!-- facebook metatags -->
   <meta property="fb:app_id"      content="<%= data.app.facebook_tags.app_id %>" />
   <meta property="og:type"        content="<%= data.app.facebook_tags.type %>" />
@@ -17,16 +17,16 @@
 
   <!-- icons -->
   <link rel="shortcut icon" href="<%= data.app.assets.favicon %>">
-  
+
   <!-- stylesheet -->
   <%= stylesheet_link_tag 'pages/' + path_assets %>
-  
+
   <!-- javascript: head -->
   <%= javascript_include_tag 'head' %>
 
   <!-- title -->
   <title><%= I18n.t(:config)[:title] %></title>
-  
+
   <%= yield_content :assets %>
 </head>
 
@@ -38,7 +38,7 @@
 <%= partial "shared/header" %>
 
 <hr>
-  
+
 <!-- wrapper
 ========================================================================================================= /// -->
 <div class="wrapper">
@@ -47,7 +47,8 @@
 
 <!-- javascripts
 ========================================================================================================= /// -->
-<%= javascript_include_tag 'pages/' + path_assets %>  
+<%= javascript_include_tag 'core' %>
+<%= javascript_include_tag 'pages/' + path_assets %>
 <script>EURODANCECOMBR.config = <%= I18n.t(:config).to_json %>;</script>
 </body>
 </html>
