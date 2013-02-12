@@ -1,11 +1,32 @@
-<% _.each(data.results, function(item) { %>
-  <li>
-    <figure class="artist_tweets_list_cover">
-      <img src="<%= item.profile_image_url %>" alt="<%= item.from_usertitle %>">
-      <figcaption class="artist_tweets_list_title">
-        <strong>@<%= item.from_user %></strong><br>
-        <%= item.text %>
-      </figcaption>
-    </figure>
-  </li>
-<% }) %>
+<% if( data.action === 'add' ) { %>
+<section class="artist_tweets">
+  <div class="artist_tweets_content">
+    <ul class="artist_tweets_list">
+      <% _.each(data.results, function(item) { %>
+        <li>
+          <figure class="artist_tweets_list_cover">
+            <img src="<%= item.profile_image_url %>" alt="<%= item.from_usertitle %>">
+            <figcaption class="artist_tweets_list_title">
+              <strong>@<%= item.from_user %></strong><br>
+              <%= item.text %>
+            </figcaption>
+          </figure>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  <p class="center"><a href="#" class="next_tweets button">ver mais <i class="icon_arrows_ccw icon_right"></i></a></p>
+</section>
+<% } else { %>
+  <% _.each(data.results, function(item) { %>
+    <li>
+      <figure class="artist_tweets_list_cover">
+        <img src="<%= item.profile_image_url %>" alt="<%= item.from_usertitle %>">
+        <figcaption class="artist_tweets_list_title">
+          <strong>@<%= item.from_user %></strong><br>
+          <%= item.text %>
+        </figcaption>
+      </figure>
+    </li>
+  <% }) %>
+<% } %>

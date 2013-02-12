@@ -1,7 +1,24 @@
-<% _.each(data.images, function(item) { %>
-  <li>
-    <figure class="artist_photos_picture">
-      <img src="<%= item.url %>" alt="">
-    </figure>
-  </li>
-<% }) %>
+<% if( data.action === 'add' ) { %>
+  <section class="artist_photos">
+    <div class="artist_photos_content">
+      <ul class="artist_photos_list">
+        <% _.each(data.images, function(item) { %>
+          <li>
+            <figure class="artist_photos_picture">
+              <img src="<%= item.url %>" alt="">
+            </figure>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <p class="center"><a href="#" class="next_photos button">ver mais <i class="icon_arrows_ccw icon_right"></i></a></p>
+  </section>
+<% } else { %>
+  <% _.each(data.images, function(item) { %>
+    <li>
+      <figure class="artist_photos_picture">
+        <img src="<%= item.url %>" alt="">
+      </figure>
+    </li>
+  <% }) %>
+<% } %>

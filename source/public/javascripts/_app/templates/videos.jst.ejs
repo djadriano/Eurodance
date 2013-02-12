@@ -1,4 +1,20 @@
-<ul class="artist_videos_list">
+<% if( data.action === 'add' ) { %>
+  <section class="artist_videos">
+    <div class="artist_videos_content">
+      <ul class="artist_videos_list">
+        <% _.each(data.video, function(item) { %>
+          <li>
+            <figure class="artist_mixes_videos_cover">
+              <img src="<%= item.image_url %>" alt="<%= item.title %>">
+              <figcaption class="artist_videos_list_title"><%= item.title %></figcaption>
+            </figure>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+    <p class="center"><a href="#" class="next_videos button">ver mais <i class="icon_arrows_ccw icon_right"></i></a></p>
+  </section>
+<% } else { %>
   <% _.each(data.video, function(item) { %>
     <li>
       <figure class="artist_mixes_videos_cover">
@@ -7,4 +23,4 @@
       </figure>
     </li>
   <% }) %>
-</ul>
+<% } %>

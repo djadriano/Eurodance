@@ -1,0 +1,1 @@
+EURODANCECOMBR.Mp3Model = Backbone.Model.extend({});

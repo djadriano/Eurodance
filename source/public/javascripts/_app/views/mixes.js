@@ -4,33 +4,28 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
 
   // set the variables
   el          : '.artist_navigation_content'
-  , next_href : ''
   , template  : JST[ '_app/templates/mixes' ]
 
   // set the events
   , events : {
-    'click .next' : 'see_more'
+    'click .next_mixes' : 'see_more'
   }
 
   // constructor
   , initialize : function() {
 
-    _.bindAll( this, 'render', 'see_more', 'get_content' );
+    _.bindAll( this, 'render', 'see_more', 'pagination' );
 
-    this.listenTo( this.model, 'change:artist', this.get_content );
+    this.listenTo( this.model, 'change:pagination', this.pagination  );
 
-  }
-
-  , get_content : function() {
-
-    this.collection = new EURODANCECOMBR.MixesCollection();
     this.collection.on( 'add', this.render );
 
-    this.has_render = false;
+    this.model.set({ has_render : false });
 
     this.collection.fetch({
-      data : { q : this.model.get( 'artist' ) }
+      data : { q : this.options.artist }
     });
+
   }
 
   // render the results
@@ -39,14 +34,16 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
     var data_to_template = model.toJSON()
       , el_list          = $( '.artist_mixes_list' );
 
-    // if have the next page update the next_href variable
-    typeof data_to_template.next_href != 'undefined' ? this.next_href = data_to_template.next_href : this.next_href = this.next_href;
+    // set the pagination value
+    this.model.set({ pagination : data_to_template.next_href });
 
     // check if is update content or append content
-    if( this.has_render === false ) {
+    if( this.model.get( 'has_render' ) === false ) {
 
       data_to_template = $.extend( {}, data_to_template, { action : 'add' } );
       this.update_content( this.$el, data_to_template );
+
+      this.model.set({ has_render : true });
 
     } else {
 
@@ -55,14 +52,6 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
 
     }
 
-    // if don't have the next page hide the next button
-    if( typeof data_to_template.next_href === 'undefined' ) {
-      this.$( '.next' ).hide();
-    }
-
-    // update the has_render variable
-    this.has_render === false ? this.has_render = true : false;
-
   }
 
   // function for get more results
@@ -70,13 +59,21 @@ EURODANCECOMBR.MixesView = Backbone.View.extend({
 
     evt.preventDefault();
 
-    this.collection.url = this.next_href;
+    this.collection.url = this.model.get( 'pagination' );
     this.collection.fetch();
 
   }
 
+  , pagination : function() {
+
+    // if don't have the next page hide the next button
+    if( typeof this.model.get( 'pagination' ) === 'undefined' ) {
+      this.$( '.next_mixes' ).hide();
+    }
+
+  }
+
   , update_content : function( el, data_to_template ) {
-    this.$( '.next' ).show();
     el.html( this.template( { data : data_to_template } ) );
   }
 

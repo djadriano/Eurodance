@@ -1,0 +1,1 @@
+EURODANCECOMBR.NavigationModel = Backbone.Model.extend({});

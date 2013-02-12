@@ -2,7 +2,8 @@
 
 EURODANCECOMBR.Mp3View = Backbone.View.extend({
 
-  template     : JST[ '_app/templates/mp3' ]
+  el           : '.artist_navigation_content'
+  , template   : JST[ '_app/templates/mp3' ]
   , initialize : function() {
 
     var self = this;
@@ -17,7 +18,7 @@ EURODANCECOMBR.Mp3View = Backbone.View.extend({
   }
 
   , render : function( model ) {
-    $( '.artists_mp3' ).append( this.template( { data : model.toJSON() } ) );    
+    this.$el.html( this.template( { data : model.toJSON() } ) );
   }
 
 });
